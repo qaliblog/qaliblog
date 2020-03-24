@@ -32,7 +32,7 @@ body{
 
 
 
-.h1art{
+.hart{
   margin-top: 20px;
   margin-bottom: 15px;
 }
@@ -45,7 +45,24 @@ body{
 .article-alert{
   margin-top: 15px;
 }
-
+.article-well{
+  margin-top: 20px;
+}
+.article-title{
+  font-weight: bold;
+  font-size: 1.5em;
+}
+.aritcle-body{
+  border-top: 1px #d9dadb;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.article-actions {
+  border-bottom: 2px #d9dadb solid;
+  border-top: 2px #d9dadb solid;
+  padding: 5px;
+  margin-top: 15px;
+}
 
 .footer {
   border-top: 4px #444 solid;
