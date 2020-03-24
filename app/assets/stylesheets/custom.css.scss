@@ -1,0 +1,39 @@
+
+$navbar-default-bg: #3b0156;
+
+
+@import "bootstrap";
+
+body{
+  background: #eaeaea;
+}
+
+#logo {
+  float: left;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+.center {
+  text-align: center;
+}
+.homebg {
+  background-image: asset_url('bgsofa.jpeg');
+  background-size: cover;
+  height: 600px;
+  border: 4px #444 solid;
+  border-top: 0px;
+  border-radius: 0px;
+}
+
+
+
+
+
+.footer {
+  border-top: 4px #444 solid;
+  width: 100%;
+  min-height: 100px;
+}
