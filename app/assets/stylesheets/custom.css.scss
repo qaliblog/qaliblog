@@ -64,6 +64,19 @@ body{
   margin-top: 15px;
 }
 
+
+.listing li a:hover{
+  text-decoration: none;
+}
+.userpad{
+  border: 3px #343a40 solid;
+  background: #eaeaea;
+  padding: 20px;
+  margin: 20px;
+  list-style: none;
+}
+
+
 .footer {
   border-top: 4px #444 solid;
   margin-top: 40px;
