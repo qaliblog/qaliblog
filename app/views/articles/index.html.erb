@@ -1,3 +1,7 @@
 <h1 class="hart">Listing all articles</h1>
 
 <%= render 'article', obj: @articles %>
+
+<div class="pagnav row justify-content-center">
+  <%= will_paginate %>
+</div>
