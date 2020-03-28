@@ -3,7 +3,7 @@
   <ul class="listing col-md-4">
     <div class="row userpad">
       <li><%= link_to user.username, user_path(user) %></br>
-        <small><%= pluralize(user.articles.count, "article") if user.articles.any? %><%= if user.user_admin == 1 then puts " | Admin ID" end %></small>
+        <small><%= pluralize(user.articles.count, "article") if user.articles.any? %></small>
       </li>
     </div>
   </ul>
