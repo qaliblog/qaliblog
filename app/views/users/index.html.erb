@@ -1,10 +1,16 @@
 <h1 class="hart">Qali blog users:<h1>
 <% @users.each do |user| %>
-  <ul class="listing col-md-4">
-    <div class="row userpad">
-      <li><%= link_to user.username, user_path(user) %></br>
-        <small><%= pluralize(user.articles.count, "article") if user.articles.any? %></small>
-      </li>
+  <div class="listing col-md-6">
+    <div class="row userpad card">
+      <div class="card-header"><h2 class="card-title"><%= link_to user.username, user_path(user) %><h2></div>
+      <% if user.articles.any? %>
+        <div class="card-body">
+          <small><%= pluralize(user.articles.count, "article") if user.articles.any? %></small>
+            <% if user.user_admin === 1 %>
+              <small> | Administrator user</small>
+            <% end %>
+        </div>
+      <% end %>
     </div>
-  </ul>
+  </div>
 <% end %>

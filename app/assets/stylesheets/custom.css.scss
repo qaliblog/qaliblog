@@ -25,12 +25,17 @@ body{
   background-image: asset_url('bgsofa.jpeg');
   background-size: cover;
   height: 600px;
-  border: 4px #444 solid;
-  border-top: 0px;
+  border: 4px #343a40 solid;
   border-radius: 0px;
+  margin-top: -4px;
 }
-
-
+.homeinfo{
+  margin: auto;
+  text-align: center;
+}
+.signuphome{
+  margin-top: 20px;
+}
 
 
 
@@ -70,16 +75,29 @@ body{
   margin-top: 40px;
 }
 
-.listing li a:hover{
+.listing{
+  margin-bottom: 25px;
+}
+
+.listing a:hover{
   text-decoration: none;
 }
 .userpad{
-  border: 3px #343a40 solid;
-  background: #fff;
-  padding: 20px;
-  margin: 20px;
+  border: 3px #d9dadb solid;
+
   list-style: none;
 }
+.userpad small{
+  font-size: 0.5em;
+}
+
+.profile{
+    float: right;
+}
+
+
+
+
 
 
 .footer {

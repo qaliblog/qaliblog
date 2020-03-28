@@ -8,11 +8,13 @@
         <div class="article-body card-body">
           <%= truncate(article.description, length: 100) %>
         </div>
-        <div class="article-actions">
-          <%= link_to "Edit this article", edit_article_path(article), class: "btn btn-primary btn-sm" %> |
-          <%= link_to "Delete this article", article_path(article), method: :delete,
-           data: {confirm: "Are you sure?"},class: "btn btn-danger btn-sm" %>
-        </div>
+        <% if logged_in? && current_user == article.user %>
+          <div class="article-actions">
+            <%= link_to "Edit this article", edit_article_path(article), class: "btn btn-primary btn-sm" %> |
+            <%= link_to "Delete this article", article_path(article), method: :delete,
+             data: {confirm: "Are you sure?"},class: "btn btn-danger btn-sm" %>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>
