@@ -23,17 +23,19 @@
             <%= link_to "View your profile", user_path(current_user), class: "dropdown-item" %>
           </div>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Actions
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <%= link_to "Create new article", new_article_path, class: "dropdown-item" %>
-            <%= link_to "Users", users_path, class: "dropdown-item" %>
-            <div class="dropdown-divider"></div>
-            <%= link_to "Articles", user_path(current_user), class: "dropdown-item" %>
-          </div>
-        </li>
+        <% if current_user.admin? %>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Actions
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <%= link_to "Create new article", new_article_path, class: "dropdown-item" %>
+              <%= link_to "Users", users_path, class: "dropdown-item" %>
+              <div class="dropdown-divider"></div>
+              <%= link_to "Articles", user_path(current_user), class: "dropdown-item" %>
+            </div>
+          </li>
+        <% end %>
         <li class="nav-item">
           <%= link_to "Logout", logout_path, method: :delete, class: "nav-link" %>
         </li>

@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+  before_action :require_admin, only: [:new, :create, :edit, :update, :destroy]
   before_action :set_article, only: [:show, :destroy, :edit, :update]
   before_action :require_user, except: [:index, :show]
   before_action :require_same_user, only: [:edit, :update, :destroy]
@@ -51,9 +52,15 @@ class ArticlesController < ApplicationController
     params.require(:article).permit(:title, :description)
   end
   def require_same_user
-    if current_user != @article.user
+    if current_user != @article.user and !current_user.admin?
       flash[:danger] = "You must be logged in to perform that action"
       redirect_to root_path
+    end
   end
-
+  def require_admin
+    if logged_in? and !current_user.admin?
+      flash[:danger] = "Only admin users can perform that action"
+      redirect_to root_path
+    end
+  end
 end
