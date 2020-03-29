@@ -1,3 +1,5 @@
 <h1 class="hart">Welcome <%= @user.username %></h1>
-<h2>Your Articles:</h2>
+<% if @user.articles.any? %>
+  <h2>Your Articles:</h2>
+<% end %>
 <%= render '/articles/article', obj: @user.articles %>
