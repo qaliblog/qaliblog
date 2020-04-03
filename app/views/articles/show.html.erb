@@ -2,9 +2,13 @@
 <h2 class="hart"><%= @article.title %></h2>
 <div class="col-10 offset-1 card card-body bg-light">
   <p><%= simple_format(@article.description) %></p>
+  <hr>
+  <% if @article.categories.any? %>
+    <p>Categories: <%= render @article.categories %></p>
+  <% end %>
 </div>
 
-<div class="article-actions">
+<div class="article-actions show-article-actions">
   <% if logged_in? && (current_user == @article.user || current_user.admin?) %>
     <%= link_to "Edit this article", edit_article_path(@article), class: "btn btn-primary btn-sm" %> |
     <%= link_to "Delete this article", article_path(@article), method: :delete,

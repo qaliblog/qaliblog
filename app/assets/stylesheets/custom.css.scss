@@ -11,7 +11,7 @@ body{
 #logo {
   float: left;
   font-size: 1.7em;
-  color: #fff;
+  color: #ffc107;
   text-transform: uppercase;
   letter-spacing: -1px;
   font-weight: bold;
@@ -59,17 +59,34 @@ body{
   font-weight: bold;
   font-size: 1.5em;
 }
-.aritcle-body{
+.article-body{
   border-top: 1px #d9dadb;
   padding-top: 15px;
-  padding-bottom: 15px;
+  padding-bottom: 0px;
+}
+.art-description{
+  padding-bottom: 10px;
 }
 .article-actions {
   border-bottom: 2px #d9dadb solid;
   border-top: 2px #d9dadb solid;
   padding: 5px;
-  margin-top: 15px;
 }
+.show-article-actions {
+  margin-top: 20px;
+}
+.input-checkbox{
+  margin-left: 15px;
+}
+.input-checkbox .checkbox{
+  margin-right: 5px;
+}
+
+.c-badge a{
+  color: #000;
+}
+
+
 
 .pagnav{
   margin-top: 40px;
@@ -113,9 +130,18 @@ body{
 
 .sidebar{
   border: 4px #343a40 solid;
+  background: #f9e893;
   margin-top: -4px;
   padding-top: 15px;
   margin-bottom: 0px;
+}
+.sidebar li{
+  padding-top: 10px;
+  margin-top: 5px;
+  font-weight: bold;
+}
+.sidebar li a{
+  text-decoration: none;
 }
 
 
@@ -124,7 +150,12 @@ body{
 
 
 
-
+.category-actions {
+  border-bottom: 2px #d9dadb solid;
+  border-top: 2px #d9dadb solid;
+  padding: 5px;
+  margin-top: 15px;
+}
 
 
 

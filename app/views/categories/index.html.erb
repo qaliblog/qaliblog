@@ -1,0 +1,21 @@
+<h1 class="hart">Listing all categories</h1>
+
+<div class="row">
+  <div class="col-md-6 offset-3">
+    <% @categories.each do |category| %>
+      <div class="card">
+        <div class="card-body">
+          <div class="col-md-6 row"><%= category.name %> ---></div>
+          <div class="col-md-12 row">
+            <div class="category-actions">
+                <%= link_to "Edit this category", edit_category_path(category), class: "btn btn-primary btn-sm" %> |
+                <%= link_to "Delete this category", category_path(category), method: :delete,
+                data: {confirm: "Are you sure?"},class: "btn btn-danger btn-sm" %> |
+                <%= link_to "View all articles", articles_path, class: "btn btn-success btn-sm" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

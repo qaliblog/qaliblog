@@ -1,7 +1,12 @@
-<h1 class="hart">Listing all articles</h1>
+<div class="row">
+  <%= render 'layouts/sidebar' %>
 
-<%= render 'article', obj: @articles %>
+  <div class="article-main col-md-9">
+    <h1 class="hart">Listing all articles</h1>
+    <%= render 'article', obj: @articles %>
 
-<div class="pagnav row justify-content-center">
-  <%= will_paginate %>
+    <div class="pagnav row justify-content-center">
+      <%= will_paginate %>
+    </div>
+  </div>
 </div>
