@@ -3,7 +3,9 @@ $navbar-default-bg: #3b0156;
 
 
 @import "bootstrap";
-
+$ycolor: #ffc107;
+$dnavcolor: #343a40;
+$lborderart: #d9dadb;
 body{
   background: #eaeaea;
 }
@@ -11,7 +13,7 @@ body{
 #logo {
   float: left;
   font-size: 1.7em;
-  color: #ffc107;
+  color: $ycolor;
   text-transform: uppercase;
   letter-spacing: -1px;
   font-weight: bold;
@@ -21,11 +23,14 @@ body{
      margin-left: auto;
      margin-right: auto;
 }
+.navbar{
+  background-color: $dnavcolor !important;
+}
 .homebg {
   background-image: asset_url('bgsofa.jpeg');
   background-size: cover;
   height: 600px;
-  border: 4px #343a40 solid;
+  border: 4px $dnavcolor solid;
   border-radius: 0px;
   margin-top: -4px;
 }
@@ -60,7 +65,7 @@ body{
   font-size: 1.5em;
 }
 .article-body{
-  border-top: 1px #d9dadb;
+  border-top: 1px $lborderart;
   padding-top: 15px;
   padding-bottom: 0px;
 }
@@ -68,8 +73,8 @@ body{
   padding-bottom: 10px;
 }
 .article-actions {
-  border-bottom: 2px #d9dadb solid;
-  border-top: 2px #d9dadb solid;
+  border-bottom: 2px $lborderart solid;
+  border-top: 2px $lborderart solid;
   padding: 5px;
 }
 .show-article-actions {
@@ -100,7 +105,7 @@ body{
   text-decoration: none;
 }
 .userpad{
-  border: 3px #d9dadb solid;
+  border: 3px $lborderart solid;
 
   list-style: none;
 }
@@ -115,7 +120,7 @@ body{
 
 .users-admin-actions{
   margin-top: 15px;
-  border-top: 2px #d9dadb solid;
+  border-top: 2px $lborderart solid;
   padding-top: 5px;
 }
 
@@ -129,7 +134,7 @@ body{
 
 
 .sidebar{
-  border: 4px #343a40 solid;
+  border: 4px $dnavcolor solid;
   background: #f9e893;
   margin-top: -4px;
   padding-top: 15px;
@@ -151,8 +156,8 @@ body{
 
 
 .category-actions {
-  border-bottom: 2px #d9dadb solid;
-  border-top: 2px #d9dadb solid;
+  border-bottom: 2px $lborderart solid;
+  border-top: 2px $lborderart solid;
   padding: 5px;
   margin-top: 15px;
 }
