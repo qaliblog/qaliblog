@@ -1,4 +1,5 @@
 class Article < ActiveRecord::Base
+  scope :recent_first, -> {order(created_at: :desc)}
   belongs_to :user
   has_many :article_categories, dependent: :destroy
   has_many :categories, through: :article_categories

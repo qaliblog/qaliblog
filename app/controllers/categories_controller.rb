@@ -1,6 +1,7 @@
 class CategoriesController < ApplicationController
   before_action :require_admin, only: [:new, :create, :edit, :update, :destroy, :index]
   before_action :require_user, except: [:show]
+  before_action :set_category, only: [:edit, :update, :show, :destroy]
 
   def index
     @categories = Category.all
@@ -21,11 +22,9 @@ class CategoriesController < ApplicationController
   end
 
   def edit
-    @category = Category.find(params[:id])
   end
 
   def update
-    @category = Category.find(params[:id])
     if @category.update(category_params)
       flash[:success] = "Category name was successfuly updated"
       redirect_to categories_path
@@ -35,18 +34,19 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    @category = Category.find(params[:id])
-    @category_articles  = @category.articles.paginate(page: params[:page], per_page: 5)
+    @category_articles  = @category.articles.recent_first.paginate(page: params[:page], per_page: 5)
   end
 
   def destroy
-    @category = Category.find(params[:id])
     @category.destroy
     flash[:danger] = "Category was successfully destroyed"
     redirect_to categories_path
   end
 
   private
+  def set_category
+    @category = Category.find(params[:id])
+  end
   def category_params
     params.require(:category).permit(:name)
   end

@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:edit, :update, :show]
-  before_action :require_same_user, only: [:edit, :update]
   before_action :require_admin, only: [:index, :destroy]
+  before_action :require_same_user, only: [:edit, :update]
+  before_action :set_user, only: [:edit, :update, :show, :destroy]
   def index
     @users = User.all
   end
@@ -29,9 +29,9 @@ class UsersController < ApplicationController
    end
   end
   def show
+      @user_articles = @user.articles.recent_first.paginate(page: params[:page], per_page: 5)
   end
   def destroy
-    @user = User.find(params[:id])
     @user.destroy
     flash[:danger] = "This user and all the articles of user has been deleted!"
     redirect_to users_path
