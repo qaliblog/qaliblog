@@ -6,7 +6,16 @@
           <%= link_to article.title, article_path(article) %>
         </div>
         <div class="article-body card-body">
-          <p class="art-description"><%= truncate(article.description, length: 100) %></p>
+          <div class="row">
+            <% if article.photo.exists? %>
+              <div class="col-2">
+                <%= image_tag article.photo.url(:thumb), class: "art-thumb" %>
+              </div>
+            <% end %>
+            <div class="col-10">
+              <p class="art-description"><%= truncate(article.description, length: 100) %></p>
+            </div>
+          </div>
           <hr>
           <% if article.categories.any? %>
             <p>Categories: <%= render article.categories %></p>

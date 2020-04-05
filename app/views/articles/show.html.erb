@@ -1,13 +1,19 @@
 
 <h2 class="hart"><%= @article.title %></h2>
-<div class="col-10 offset-1 card card-body bg-light">
-  <p><%= simple_format(@article.description) %></p>
-  <hr>
-  <% if @article.categories.any? %>
-    <p>Categories: <%= render @article.categories %></p>
+<div class="row">
+  <% if @article.photo.exists? %>
+    <div class="col-4">
+      <a class="medium-pic" data-toggle="modal" data-target="#ModalCenter"><%= image_tag @article.photo.url(:medium), class: "art-thumb" %></a>
+    </div>
   <% end %>
+  <div class="col-8 card card-body bg-light">
+      <p><%= simple_format(@article.description) %></p>
+    <hr>
+    <% if @article.categories.any? %>
+      <p>Categories: <%= render @article.categories %></p>
+    <% end %>
+  </div>
 </div>
-
 <div class="article-actions show-article-actions">
   <% if logged_in? && (current_user == @article.user || current_user.admin?) %>
     <%= link_to "Edit this article", edit_article_path(@article), class: "btn btn-primary btn-sm" %> |
@@ -15,4 +21,19 @@
     data: {confirm: "Are you sure?"},class: "btn btn-danger btn-sm" %> |
     <% end %>
   <%= link_to "View all articles", articles_path, class: "btn btn-success btn-sm" %>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="ModalCenter" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+        <button type="button" class="close x-close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+
+        <%= image_tag @article.photo.url(:large) %>
+
+    </div>
+  </div>
 </div>

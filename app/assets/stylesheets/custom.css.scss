@@ -57,6 +57,17 @@ body{
 .article-alert{
   margin-top: 15px;
 }
+.art-thumb{
+  border: 3px $lborderart solid;
+}
+.medium-pic{
+  cursor: pointer;
+}
+.x-close{
+  right: 5px;
+  z-index: 100;
+  position: absolute;
+}
 .article-well{
   margin-top: 20px;
 }
