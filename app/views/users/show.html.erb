@@ -1,6 +1,6 @@
-<h1 class="hart row justify-content-center">Welcome <%= @user.username %></h1>
+<h1 class="hart row justify-content-center"><%= t('views.usershow.welcome') %> <%= @user.username %></h1>
 <% if @user.articles.any? %>
-  <h2>Your Articles:</h2>
+  <h2><%= t('views.usershow.yourarticles') %>:</h2>
   <%= render '/articles/article', obj: @user_articles %>
   <div class="pagnav row justify-content-center">
     <%= will_paginate @user_articles %>

@@ -12,7 +12,7 @@ class UsersController < ApplicationController
    @user = User.new(user_params)
    if @user.save
      session[:user_id] = @user.id
-     flash[:success] = "welcome to Qaliblog #{@user.username}"
+     flash[:success] = t('cont.users.welcome') + "#{@user.username}"
      redirect_to user_path(@user)
    else
      render 'new'
@@ -22,7 +22,7 @@ class UsersController < ApplicationController
   end
   def update
    if @user.update(user_params)
-     flash[:success] = "Your account was updated successfully"
+     flash[:success] = t('cont.users.updated')
      redirect_to articles_path
    else
      render 'edit'
@@ -33,7 +33,7 @@ class UsersController < ApplicationController
   end
   def destroy
     @user.destroy
-    flash[:danger] = "This user and all the articles of user has been deleted!"
+    flash[:danger] = t('cont.users.deleted')
     redirect_to users_path
   end
   private
@@ -45,13 +45,13 @@ class UsersController < ApplicationController
   end
   def require_same_user
     if current_user != @user and !current_user.admin?
-      flash[:danger] = "You must be logged in to perform that action"
+      flash[:danger] = t('cont.users.requireuser')
       redirect_to root_path
     end
   end
   def require_admin
     if logged_in? and !current_user.admin?
-      flash[:danger] = "Only admin users can perform that action"
+      flash[:danger] = t('cont.users.onlyadmin')
       redirect_to root_path
     end
   end

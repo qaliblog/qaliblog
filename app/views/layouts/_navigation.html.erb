@@ -1,58 +1,66 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <%= link_to "Qali", root_path, class: "navbar-brand", id: "logo" %>
+  <%= link_to t('views.nav.qali'), root_path, class: "navbar-brand", id: "logo" %>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav mx-navitems">
       <li class="nav-item">
-        <%= link_to "Blog", articles_path, class: "nav-link" %>
+        <%= link_to t('views.nav.blog'), articles_path, class: "nav-link" %>
       </li>
       <li class="nav-item">
-        <%= link_to "About", about_path, class: "nav-link" %>
+        <%= link_to t('views.nav.about'), about_path, class: "nav-link" %>
       </li>
 
       <% if logged_in? %>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Profile
+            <%= t('views.nav.profile') %>
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <%= link_to "Edit your profile", edit_user_path(current_user), class: "dropdown-item" %>
-            <%= link_to "View your profile", user_path(current_user), class: "dropdown-item" %>
+            <%= link_to t('views.nav.edit'), edit_user_path(current_user), class: "dropdown-item" %>
+            <%= link_to t('views.nav.view'), user_path(current_user), class: "dropdown-item" %>
           </div>
         </li>
         <% if current_user.admin? %>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Actions
+              <%= t('views.nav.actions') %>
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <%= link_to "Create new article", new_article_path, class: "dropdown-item" %>
-              <%= link_to "Create new category", new_category_path, class: "dropdown-item" %>
-              <%= link_to "Categories", categories_path, class: "dropdown-item" %>
+              <%= link_to t('views.nav.newp'), new_article_path, class: "dropdown-item" %>
+              <%= link_to t('views.nav.newc'), new_category_path, class: "dropdown-item" %>
+              <%= link_to t('views.nav.cats'), categories_path, class: "dropdown-item" %>
               <div class="dropdown-divider"></div>
-              <%= link_to "Users", users_path, class: "dropdown-item" %>
+              <%= link_to t('views.nav.users'), users_path, class: "dropdown-item" %>
             </div>
           </li>
         <% end %>
         <li class="nav-item">
-          <%= link_to "Logout", logout_path, method: :delete, class: "nav-link" %>
+          <%= link_to t('views.nav.logout'), logout_path, method: :delete, class: "nav-link" %>
         </li>
       <% else %>
         <li class="nav-item">
-          <%= link_to "Login", login_path, class: "nav-link" %>
+          <%= link_to t('views.nav.login'), login_path, class: "nav-link" %>
         </li>
         <li class="nav-item">
-          <%= link_to "Signup", signup_path, class: "nav-link" %>
+          <%= link_to t('views.nav.signup'), signup_path, class: "nav-link" %>
         </li>
       <% end %>
-
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-language"></i>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item textcenter" href="<%= url_for locale: 'en' %>">English</a>
+          <a class="dropdown-item textcenter" href="<%= url_for locale: 'fa' %>"><%= t 'views.nav.persian' %></a>
+        </div>
+      </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Search</button>
+    <form class="form-inline my-2 my-lg-0 searchform">
+      <input class="form-control search" type="search" placeholder="<%= t('views.nav.search') %>" aria-label="Search">
+      <button class="btn btn-outline-warning my-2 my-sm-0 searchsub" type="submit"><%= t('views.nav.search') %></button>
     </form>
   </div>
 </nav>

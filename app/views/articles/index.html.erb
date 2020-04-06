@@ -2,7 +2,7 @@
   <%= render 'layouts/sidebar' %>
 
   <div class="article-main col-md-9">
-    <h1 class="hart">Listing all articles</h1>
+    <h1 class="hart"><%= t('views.articles.title') %></h1>
     <%= render 'article', obj: @articles %>
 
     <div class="pagnav row justify-content-center">

@@ -1,18 +1,18 @@
-<h1 class="hart">Qali blog users:<h1>
+<h1 class="hart"><%= t('views.usersindex.intro') %>:<h1>
 <% @users.each do |user| %>
-  <div class="listing col-md-6">
+  <div class="listing col-md-6 center textcenter">
     <div class="row userpad card">
       <div class="card-header"><h2 class="card-title"><%= link_to user.username, user_path(user) %><h2></div>
       <div class="card-body">
-        <small><%= pluralize(user.articles.count, "article") if user.articles.any? %></small>
+        <small><%= pluralize(user.articles.count, t('views.usersindex.articlepl')) if user.articles.any? %></small>
           <% if user.admin === true %>
-            <small> | Administrator user</small></br>
+            <small> | <%= t('views.usersindex.admin') %></small></br>
           <% end %>
           <% if logged_in? and current_user.admin? %>
             <div class="users-admin-actions">
-              <%= link_to "Edit user", edit_user_path(user), class: "btn btn-primary" %>
-              <%= link_to "Delete user", user_path(user), method: :delete,
-              data: {confirm: "Are you sure you want to delete user and all their articles"}, class: "btn btn-danger" %>
+              <%= link_to t('views.usersindex.edit'), edit_user_path(user), class: "btn btn-primary" %>
+              <%= link_to t('views.usersindex.delete'), user_path(user), method: :delete,
+              data: {confirm: t('views.usersindex.deletemsg')}, class: "btn btn-danger" %>
             </div>
           <% end %>
       </div>

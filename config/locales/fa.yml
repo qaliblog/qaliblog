@@ -1,0 +1,193 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   'true': 'foo'
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+fa:
+  views:
+    nav:
+      qali: کالی
+      blog: بلاگ
+      about: درباره
+      profile: پروفایل
+      edit: تغییر پروفایل
+      view: نمایش پروفایل
+      actions: کار ها
+      newp: ساخت پست جدید
+      newc: ساخت دسته بندی جدید
+      cats: دسته بندی ها
+      users: کاربر ها
+      login: ورود
+      logout: خروج
+      signup: ثبت نام
+      persian: فارسی
+      search: جستجو
+
+    home:
+      qalion: کالی آنلاین
+      order:  ثبت نام کنید تا محصول خود را همین الان سفارش دهید!
+      signup: ثبت نام کن
+
+    about:
+      title: درباره شرکت
+      lorem: طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی برای پر کردن صفحه و ارایه اولیه شکل ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید، تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و... ظاهر متن باشد. معمولا طراحان گرافیک برای صفحه‌آرایی، نخست از متن‌های آزمایشی و بی‌معنی استفاده می‌کنند...
+
+
+    articles:
+      title:  دسته بندی همه محصولات
+      cattitle: نمایش محصولات از دسته بندی
+      cats: دسته بندی
+      edit: تغییر پست
+      delete: حذف پست
+      deletemsg:  آیا مطمئن هستید؟
+
+    articleform:
+      newtitle: ساخت پست جدید
+      edittitle: ویرایش پست
+      title:  سرتیتر
+      titleph:  سرتیتر پست
+      photo: بارگزاری عکس
+      description:  توضیحات
+      body: متن خود را وارد کنید...
+      submit: ایجاد پست
+      backtoarticles: بازگشت به بخش محصولات
+
+
+
+    articleshow:
+      cats: دسته بندی
+      viewall: نمایش همه محصولات
+      edit: تغییر پست
+      delete: حذف پست
+      deletemsg:  آیا مطمئن هستید؟
+
+    categories:
+      edittitle: ویرایش اسم دسته بندی
+      newtitle: ساخت دسته بندی جدید
+      indexviewall: لیست همه دسته بندی ها
+      edit: ویرایش اسم دسته بندی
+      delete: حذف دسته بندی
+      deletemsg:  آیا مطمئن هستید؟
+      viewarticles: نمایش همه پست ها
+
+
+    categoryform:
+      name: نام دسته بندی
+      category: دسته بندی...
+      submit: ثبت
+      backtoarticles: بازگشت به بلاگ
+
+
+
+
+
+
+
+
+
+    users:
+      edit: ویرایش مشخصات اکانت
+      username: نام کاربری
+      enterusername: نام کاربری خود را وارد کنید...
+      email:  ایمیل
+      enteremail: ایمیل خود را وارد کنید...
+      password: پسورد
+      enterpassword:  پسورد خود را وارد کنید...
+      signup: ثبت نام
+      update: به روز رسانی حساب
+      backtohome: بازگشت به صفحه اصلی
+      login: ورود
+      loginacc: به حساب خود وارد شوید
+      signupin: ثبت نام در وبسایت
+
+
+
+    usershow:
+      welcome: خوش آمدید
+      yourarticles: پست های شما
+
+
+
+    usersindex:
+      intro: کاربران شرکت
+      articlepl: پست
+      admin:  کاربر ادمین
+      edit: ویرایش اطلاعات کاربر
+      delete: حذف کاربر
+      deletemsg: آیا مطمئن هستید میخواهید کاربر و تمامی پست هایش را حذف کنید؟
+
+
+
+
+
+
+
+
+    footer:
+      copy: کپی رایت
+      link: لینک مستقیم
+      linkto: برای وبسایت کالی
+      by: توسط
+
+
+
+
+
+  cont:
+
+    application:
+      requireuser: شما باید ابتدا وارد شناسه کاربری خود شوید!
+
+    articles:
+      updated: پست با موفقیت ویرایش شد!
+      created:  پست با موفقیت ساخته شد!
+      destroyed: پست با موفقیت حذف شد!
+      requireuser: شما باید ابتدا وارد شناسه کاربری خود شوید!
+      onlyadmin: فقط کاربران ادمین حق باز کردن این صفحه را دارند!
+
+
+    categories:
+      updated: اسم دسته بندی با موفقیت ویرایش شد!
+      created:  دسته بندی با موفقیت ساخته شد!
+      destroyed: دسته بندی با موفقیت حذف شد!
+      onlyadmin: فقط کاربران ادمین حق باز کردن این صفحه را دارند!
+
+
+    sessions:
+      loggedin: شما با موفقیت وارد شدید!
+      wrong: درخواست شما مشکل داشت!
+      loggedout: شما با موفقیت خارج شدید!
+
+
+    users:
+      welcome: خوش آمدید
+      updated: شناسه شما با موفقیت ویرایش شد!
+      deleted: این کاربر و تمامی پست هایش حذف شد!
+      requireuser: شما باید ابتدا وارد شناسه کاربری خود شوید!
+      onlyadmin: فقط کاربران ادمین حق باز کردن این صفحه را دارند!

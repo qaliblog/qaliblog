@@ -18,7 +18,7 @@ class ArticlesController < ApplicationController
 
   def update
     if @article.update(article_params)
-      flash[:success] = "Article was successfuly updated"
+      flash[:success] = t('cont.articles.updated')
       redirect_to article_path(@article)
     else
       render 'edit'
@@ -30,7 +30,7 @@ class ArticlesController < ApplicationController
     @article = Article.new(article_params)
     @article.user = current_user
     if @article.save
-      flash[:success] = "Article was successfuly created"
+      flash[:success] = t('cont.articles.created')
       redirect_to article_path(@article)
     else
       render 'new'
@@ -41,7 +41,7 @@ class ArticlesController < ApplicationController
   end
   def destroy
     @article.destroy
-    flash[:danger] = "Article was successfuly destroyed"
+    flash[:danger] = t('cont.articles.destroyed')
     redirect_to articles_path
   end
 
@@ -54,13 +54,13 @@ class ArticlesController < ApplicationController
   end
   def require_same_user
     if current_user != @article.user and !current_user.admin?
-      flash[:danger] = "You must be logged in to perform that action"
+      flash[:danger] = t('cont.articles.requireuser')
       redirect_to root_path
     end
   end
   def require_admin
     if logged_in? and !current_user.admin?
-      flash[:danger] = "Only admin users can perform that action"
+      flash[:danger] = t('cont.articles.onlyadmin')
       redirect_to root_path
     end
   end

@@ -8,23 +8,23 @@
       <div class="row">
         <div class="form-group col-md-6">
           <div class="control-label col-2">
-            <%= f.label :title %>
+            <%= f.label t('views.articleform.title') %>
           </div>
           <div class="col-8">
-            <%= f.text_field :title, class: "form-control", placeholder: "Title of article", autofocus: true %>
+            <%= f.text_field :title, class: "form-control", placeholder: t('views.articleform.titleph'), autofocus: true %>
           </div>
         </div>
         <div class="form-group col-md-6">
-          <label for="exampleFormControlFile1">Photo input</label>
+          <label for="exampleFormControlFile1"><%= t('views.articleform.photo') %></label>
           <%= f.file_field :photo, class: "form-control-file", id: "exampleFormControlFile1" %>
         </div>
       </div>
       <div class="form-group">
         <div class="control-label col-2">
-          <%= f.label :description %>
+          <%= f.label t('views.articleform.description') %>
         </div>
         <div class="col-10">
-          <%= f.text_area :description, class: "form-control",rows: 6 , placeholder: "Body of the article..." %>
+          <%= f.text_area :description, class: "form-control",rows: 6 , placeholder: t('views.articleform.body') %>
         </div>
       </div>
       <div class="form-group">
@@ -38,12 +38,12 @@
       </div>
       <div class="form-group">
         <div class="col-10">
-          <%= f.submit class: "btn btn-primary btn-lg" %>
+          <%= f.submit t('views.articleform.submit') , class: "btn btn-primary btn-lg" %>
         </div>
       </div>
     <% end %>
     <div class="col-2 offset-10">
-      <%= link_to "Back to articles", articles_path %>
+      <%= link_to t('views.articleform.backtoarticles'), articles_path %>
     </div>
   </div>
 </div>

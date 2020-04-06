@@ -11,12 +11,15 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'will_paginate'
 gem 'will_paginate-bootstrap4'
 gem "paperclip", "~> 6.0.0"
+gem 'rails-i18n', '~> 5.1'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
 gem 'bootstrap', '~> 4.4.1'
 gem 'sprockets-rails'
 gem 'sass-rails', '~> 5.0'
+# Use FontAwesome for icons
+gem 'font-awesome-sass'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes

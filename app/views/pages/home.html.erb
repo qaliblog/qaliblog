@@ -1,7 +1,7 @@
 <div class="center jumbotron homebg col-lg-12">
   <div class="homeinfo col-md-4">
-    <h1 class="hart">Qali Online</h1>
-    <small>Signup to order your unique product!</small>
-    <%= link_to "Signup now", signup_path, class: "btn btn-primary btn-lg signuphome" %>
+    <h1 class="hart"><%= t('views.home.qalion') %></h1>
+    <small><%= t('views.home.order') %></small>
+    <%= link_to t('views.home.signup'), signup_path, class: "btn btn-primary btn-lg signuphome" %>
   </div>
 </div>

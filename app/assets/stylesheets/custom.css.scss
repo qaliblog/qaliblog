@@ -1,18 +1,33 @@
 
-$navbar-default-bg: #3b0156;
 
 
+
+@import "lans";
 @import "bootstrap";
+@import 'font-awesome-sprockets';
+@import 'font-awesome';
+@import 'ubuntufont';
+@import 'pf';
+
+
 $ycolor: #ffc107;
 $dnavcolor: #343a40;
 $lborderart: #d9dadb;
+
+
 body{
   background: #eaeaea;
+  direction: $dir;
+  text-align: $aleft;
+  font-family: $fr;;
+  letter-spacing: $letterspace;
+  word-spacing: $wordspace;
 }
 
 #logo {
   float: left;
   font-size: 1.7em;
+  font-family: $fblogo;
   color: $ycolor;
   text-transform: uppercase;
   letter-spacing: -1px;
@@ -23,9 +38,37 @@ body{
      margin-left: auto;
      margin-right: auto;
 }
+.textcenter{
+  text-align: center;
+}
 .navbar{
   background-color: $dnavcolor !important;
+  font-family: $fthead;
 }
+.mx-navitems {
+    margin-#{$aright}: auto !important;
+}
+
+.dropdown-menu{
+  text-align: $aleft;
+}
+.dropdown-menu{
+  border-radius: 0;
+}
+.searchform{
+
+}
+.search{
+  border-radius: 0;
+}
+.searchsub{
+  border-radius: 0;
+}
+
+.flash{
+  padding-right: 30px;
+}
+
 .homebg {
   background-image: asset_url('bgsofa.jpeg');
   background-size: cover;
@@ -92,14 +135,17 @@ body{
   margin-top: 20px;
 }
 .input-checkbox{
-  margin-left: 15px;
+  margin-#{$aleft}: 15px;
 }
 .input-checkbox .checkbox{
-  margin-right: 5px;
+  margin-#{$aright}: 5px;
 }
 
 .c-badge a{
   color: #000;
+}
+.pagination{
+  direction: ltr;
 }
 
 
@@ -135,7 +181,9 @@ body{
   padding-top: 5px;
 }
 
-
+.catfontfix{
+  font-family: initial;
+}
 
 
 

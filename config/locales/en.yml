@@ -30,4 +30,152 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  views:
+    nav:
+      qali: QALI
+      blog: Blog
+      about: About
+      profile: profile
+      edit: Edit your profile
+      view: View your profile
+      actions: Actions
+      newp: Create new post
+      newc: Create new category
+      cats: Categories
+      users: Users
+      login: Login
+      logout: logout
+      signup: Signup
+      persian: Persian
+      search: Search
+
+    home:
+      qalion: Qali Online
+      order:  Signup to order your unique product!
+      signup: Signup Now
+
+    about:
+      title: About company
+      lorem: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+    articles:
+      title: Listing all products
+      cattitle: Listing all products from
+      cats: Categories
+      edit: Edit article
+      delete: Delete article
+      deletemsg:  Are you sure?
+
+    articleform:
+      newtitle: Create new article
+      edittitle: Edit an existing article
+      title:  Title
+      titleph:  Title of post...
+      photo: Photo input
+      description:  Description
+      body: Body of the post...
+      submit: Submit post
+      backtoarticles: Back to articles
+
+    articleshow:
+      cats: Categories
+      viewall: View all products
+      edit: Edit article
+      delete: Delete article
+      deletemsg:  Are you sure?
+
+
+
+    categories:
+      edittitle: Edit category name
+      newtitle: Create a category
+      indexviewall: Listing all categories
+      edit: Edit a category
+      delete: Delete a category
+      deletemsg:  Are you sure?
+      viewarticles: View all articles
+
+
+    categoryform:
+      name: Name
+      category: Category
+      submit: Submit
+      backtoarticles: Back to articles
+
+
+
+    users:
+      edit: Edit your acount
+      username: Username
+      enterusername: Enter your username...
+      email:  Email
+      enteremail: Enter your email...
+      password: Password
+      enterpassword:  Enter your password...
+      signup: Signup
+      update: Update account
+      backtohome: Back to homepage
+      login: Log in
+      loginacc: Log into your account
+      signupin: Signup in website
+
+    usershow:
+      welcome: welcome
+      yourarticles: Your articles
+
+
+    usersindex:
+      intro: Companies' users
+      articlepl: article
+      admin:  Administrator user
+      edit: Edit user data
+      delete: Delete user
+      deletemsg: Are you sure you want to delete user and all their articles?
+
+
+
+
+
+
+    footer:
+      copy: Copyright
+      link: Link forward
+      linkto:  to Qali webdesign homepage
+      by: by
+
+
+
+
+
+  cont:
+
+    application:
+      requireuser: You must be logged in to perform that action!
+
+    articles:
+      updated: Article was successfully updated!
+      created:  Article was successfully created!
+      destroyed: Article was successfully destroyed!
+      requireuser: You must be logged in to perform that action!
+      onlyadmin: Only admin users can perform that action!
+
+
+    categories:
+      updated: Category name was successfully updated!
+      created:  Category was successfully created!
+      destroyed: Category was successfully destroyed!
+      onlyadmin: Only admin users can perform that action!
+
+
+    sessions:
+      loggedin: You have successfully logged in!
+      wrong: There was something wrong with your request!
+      loggedout: You have logged out!
+
+
+    users:
+      welcome: welcome
+      updated: Your account was successfully updated!
+      deleted: This user and all of its articles has been deleted!
+      requireuser: You must be logged in to perform that action!
+      onlyadmin: Only admin users can perform that action!

@@ -1,6 +1,6 @@
 <% obj.each do |article| %>
   <div class="row">
-    <div class="col-10 offset-1">
+    <div class="col-10">
       <div class="card bg-light article-well">
         <div class="article-title card-header">
           <%= link_to article.title, article_path(article) %>
@@ -18,14 +18,14 @@
           </div>
           <hr>
           <% if article.categories.any? %>
-            <p>Categories: <%= render article.categories %></p>
+            <p><%= t('views.articles.cats') %>: <%= render article.categories %></p>
           <% end %>
         </div>
         <% if logged_in? && (current_user == article.user || current_user.admin?) %>
           <div class="article-actions">
-            <%= link_to "Edit this article", edit_article_path(article), class: "btn btn-primary btn-sm" %> |
-            <%= link_to "Delete this article", article_path(article), method: :delete,
-             data: {confirm: "Are you sure?"},class: "btn btn-danger btn-sm" %>
+            <%= link_to t('views.articles.edit'), edit_article_path(article), class: "btn btn-primary btn-sm" %> |
+            <%= link_to t('views.articles.delete'), article_path(article), method: :delete,
+             data: {confirm: t('views.articles.deletemsg')},class: "btn btn-danger btn-sm" %>
           </div>
         <% end %>
       </div>

@@ -1,0 +1,63 @@
+/***
+*        b      --->    bold
+*        i      --->    italic
+*        c      --->    condenced
+*        l      --->    light
+*        m      --->    medium
+*        mono   --->    monospace
+***/
+
+
+
+@font-face{
+  font-family: 'ubuntub';
+  src: font-url('Ubuntu-B.ttf') format('truetype');
+}
+@font-face{
+  font-family: 'ubuntubi';
+  src: font-url('Ubuntu-BI.ttf') format('truetype');
+}
+@font-face{
+  font-family: 'ubuntuc';
+  src: font-url('Ubuntu-C.ttf') format('truetype');
+}
+@font-face{
+  font-family: 'ubuntul';
+  src: font-url('Ubuntu-L.ttf') format('truetype');
+}
+@font-face{
+  font-family: 'ubuntuli';
+  src: font-url('Ubuntu-LI.ttf') format('truetype');
+}
+@font-face{
+  font-family: 'ubuntum';
+  src: font-url('Ubuntu-M.ttf') format('truetype');
+}
+@font-face{
+  font-family: 'ubuntumi';
+  src: font-url('Ubuntu-MI.ttf') format('truetype');
+}
+@font-face{
+  font-family: 'ubuntur';
+  src: font-url('Ubuntu-R.ttf') format('truetype');
+}
+@font-face{
+  font-family: 'ubunturi';
+  src: font-url('Ubuntu-RI.ttf') format('truetype');
+}
+@font-face{
+  font-family: 'ubuntub mono';
+  src: font-url('UbuntuMono-B.ttf') format('truetype');
+}
+@font-face{
+  font-family: 'ubuntubi mono';
+  src: font-url('UbuntuMono-BI.ttf') format('truetype');
+}
+@font-face{
+  font-family: 'ubuntur mono';
+  src: font-url('UbuntuMono-R.ttf') format('truetype');
+}
+@font-face{
+  font-family: 'ubunturi mono';
+  src: font-url('UbuntuMono-RI.ttf') format('truetype');
+}
