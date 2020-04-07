@@ -143,7 +143,9 @@ en:
       linkto:  to Qali webdesign homepage
       by: by
 
-
+    errors:
+      error: error
+      text: prevented the article from being created!
 
 
 

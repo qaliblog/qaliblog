@@ -12,6 +12,7 @@ gem 'will_paginate'
 gem 'will_paginate-bootstrap4'
 gem "paperclip", "~> 6.0.0"
 gem 'rails-i18n', '~> 5.1'
+gem 'globalize'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets

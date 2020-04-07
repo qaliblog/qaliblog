@@ -4,7 +4,7 @@
       <div class="card text-white bg-danger mb12">
         <div class="card-header">
           <h2 class="card-title">
-            <%= pluralize(obj.errors.count, "error") %> prevented the article from being created!
+            <%= pluralize(obj.errors.count, t('views.errors.error')) %> <%= t('views.errors.text') %>
           </h2>
         </div>
         <div class="card-body">
