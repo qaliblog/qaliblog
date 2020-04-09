@@ -7,7 +7,7 @@ class ArticlesController < ApplicationController
 
   def index
     if params[:search]
-      @articles = Article.all.search(params[:search]).all
+      @articles = Article.search(params[:search]).paginate(page: params[:page], per_page: 5)
     else
       @articles = Article.all.recent_first.paginate(page: params[:page], per_page: 5)
     end
