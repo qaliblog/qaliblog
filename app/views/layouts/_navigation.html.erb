@@ -58,9 +58,9 @@
         </div>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0 searchform">
-      <input class="form-control search" type="search" placeholder="<%= t('views.nav.search') %>" aria-label="Search">
-      <button class="btn btn-outline-warning my-2 my-sm-0 searchsub" type="submit"><%= t('views.nav.search') %></button>
-    </form>
+    <%= form_tag(articles_path, :method => "get", id: "search-form", class: "searchform form-inline my-2 my-lg-0") do %>
+      <%= text_field_tag :search, params[:search], placeholder: t('views.nav.search'), class: "form-control search" %>
+      <%= submit_tag t('views.nav.search'), :name => nil, class: "btn btn-outline-warning my-2 my-sm-0 searchsub" %>
+    <% end %>
   </div>
 </nav>

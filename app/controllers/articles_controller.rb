@@ -6,7 +6,11 @@ class ArticlesController < ApplicationController
 
 
   def index
-    @articles = Article.recent_first.paginate(page: params[:page], per_page: 5)
+    if params[:search]
+      @articles = Article.all.search(params[:search]).all
+    else
+      @articles = Article.all.recent_first.paginate(page: params[:page], per_page: 5)
+    end
   end
 
   def new

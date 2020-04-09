@@ -146,7 +146,10 @@ en:
     errors:
       error: error
       text: prevented the article from being created!
+      noarticle: There was no articles to show!
 
+    search:
+      nores: There was no resault for your search
 
 
   cont:

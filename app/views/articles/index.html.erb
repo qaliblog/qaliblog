@@ -2,11 +2,22 @@
   <%= render 'layouts/sidebar' %>
 
   <div class="article-main col-md-9">
-    <h1 class="hart"><%= t('views.articles.title') %></h1>
-    <%= render 'article', obj: @articles %>
+    <% if @articles.any? %>
+      <h1 class="hart"><%= t('views.articles.title') %></h1>
+      <%= render 'article', obj: @articles %>
 
-    <div class="pagnav row justify-content-center">
-      <%= will_paginate %>
-    </div>
+      <div class="pagnav row justify-content-center">
+        <%= will_paginate %>
+      </div>
+    <% else %>
+      <div class="card text-white bg-danger mb12 textcenter searchnil">
+        <div class="card-body">
+          <p><%= t('views.errors.noarticle') %></p>
+          <% if params[:search] %>
+            <p><%= t('views.search.nores') %>... <%= params[:search] %></p>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
   </div>
 </div>

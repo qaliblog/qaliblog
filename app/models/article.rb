@@ -14,4 +14,8 @@ class Article < ActiveRecord::Base
   validates_attachment_content_type :photo, :content_type => ['image/jpeg', 'image/png']
   translates :title, :string
   translates :description, :text
+
+  def self.search(query)
+    where("title LIKE ? OR description LIKE ?", "%#{query}%", "%#{query}%")
+  end
 end
