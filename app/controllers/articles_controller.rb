@@ -7,7 +7,12 @@ class ArticlesController < ApplicationController
 
   def index
     if params[:search]
-      @articles = Article.search(params[:search]).paginate(page: params[:page], per_page: 5)
+      @at = []
+      @at = Array.new
+      Article.translation_class.where("title LIKE ? OR description LIKE ?","%#{params[:search]}%","%#{params[:search]}%").all.each do |t|
+        @at.push t.article_id
+      end
+      @articles = Article.where(id: @at).recent_first.paginate(page: params[:page], per_page: 5)
     else
       @articles = Article.all.recent_first.paginate(page: params[:page], per_page: 5)
     end

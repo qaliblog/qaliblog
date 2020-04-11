@@ -15,7 +15,7 @@ class Article < ActiveRecord::Base
   translates :title, :string
   translates :description, :text
 
-  def self.search(query)
-    where("title LIKE ? OR description LIKE ?", "%#{query}%", "%#{query}%")
-  end
+
+
+
 end

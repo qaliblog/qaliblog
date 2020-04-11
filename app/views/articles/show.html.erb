@@ -1,12 +1,13 @@
 
-<h2 class="hart"><%= @article.title %></h2>
+<h2 class="hart row"><%= @article.title %></h2>
+<div class="container">
 <div class="row">
   <% if @article.photo.exists? %>
-    <div class="col-4">
-      <a class="medium-pic" data-toggle="modal" data-target="#ModalCenter"><%= image_tag @article.photo.url(:medium), class: "art-thumb" %></a>
+    <div class="col-md-4">
+      <a class="medium-pic" data-toggle="modal" data-target="#ModalCenter"><%= image_tag @article.photo.url(:medium), class: "art-thumb pullcenter" %></a>
     </div>
   <% end %>
-  <div class="col-8 card card-body bg-light">
+  <div class="col-md-8 card card-body bg-light">
       <p><%= simple_format(@article.description) %></p>
     <hr>
     <% if @article.categories.any? %>
@@ -14,11 +15,12 @@
     <% end %>
   </div>
 </div>
-<div class="article-actions show-article-actions">
+</div>
+<div class="article-actions show-article-actions textcenter">
   <% if logged_in? && (current_user == @article.user || current_user.admin?) %>
-    <%= link_to t('views.articleshow.edit'), edit_article_path(@article), class: "btn btn-primary btn-sm" %> |
+    <%= link_to t('views.articleshow.edit'), edit_article_path(@article), class: "btn btn-primary btn-sm" %>
     <%= link_to t('views.articleshow.delete'), article_path(@article), method: :delete,
-    data: {confirm: t('views.articleshow.deletemsg')},class: "btn btn-danger btn-sm" %> |
+    data: {confirm: t('views.articleshow.deletemsg')},class: "btn btn-danger btn-sm" %>
     <% end %>
   <%= link_to t('views.articleshow.viewall'), articles_path, class: "btn btn-success btn-sm" %>
 </div>

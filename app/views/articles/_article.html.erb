@@ -1,6 +1,6 @@
 <% obj.each do |article| %>
   <div class="row">
-    <div class="col-10">
+    <div class="col-md-12">
       <div class="card bg-light article-well">
         <div class="article-title card-header">
           <%= link_to article.title, article_path(article) %>
@@ -8,11 +8,11 @@
         <div class="article-body card-body">
           <div class="row">
             <% if article.photo.exists? %>
-              <div class="col-2">
-                <%= image_tag article.photo.url(:thumb), class: "art-thumb" %>
+              <div class="col-md-5">
+                <%= image_tag article.photo.url(:medium), class: "art-thumb pullcenter" %>
               </div>
             <% end %>
-            <div class="col-10">
+            <div class="col-md-7 margintop20">
               <p class="art-description"><%= truncate(article.description, length: 100) %></p>
             </div>
           </div>
@@ -22,8 +22,8 @@
           <% end %>
         </div>
         <% if logged_in? && (current_user == article.user || current_user.admin?) %>
-          <div class="article-actions">
-            <%= link_to t('views.articles.edit'), edit_article_path(article), class: "btn btn-primary btn-sm" %> |
+          <div class="article-actions textcenter">
+            <%= link_to t('views.articles.edit'), edit_article_path(article), class: "btn btn-primary btn-sm" %>
             <%= link_to t('views.articles.delete'), article_path(article), method: :delete,
              data: {confirm: t('views.articles.deletemsg')},class: "btn btn-danger btn-sm" %>
           </div>

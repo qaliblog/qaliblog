@@ -38,8 +38,22 @@ body{
      margin-left: auto;
      margin-right: auto;
 }
+.pullcenter{
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-content: center;
+}
+
+.margintop20{
+  margin-top:20px;
+}
 .textcenter{
   text-align: center;
+}
+.ca-cat a{
+  margin-top: 5px
 }
 .navbar{
   background-color: $dnavcolor !important;
@@ -103,9 +117,15 @@ body{
 }
 .art-thumb{
   border: 3px $lborderart solid;
+  max-width: 350px;
+  max-height: 350px;
+  height: 100%;
+  width: 100%;
 }
 .medium-pic{
   cursor: pointer;
+  align-content: center;
+  grid: flex;
 }
 .x-close{
   right: 5px;

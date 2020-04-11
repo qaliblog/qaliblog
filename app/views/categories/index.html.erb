@@ -7,10 +7,10 @@
         <div class="card-body">
           <div class="col-md-6 row catfontfix"><%= category.name %> ---></div>
           <div class="col-md-12 textcenter">
-            <div class="category-actions">
-                <%= link_to t('views.categories.edit'), edit_category_path(category), class: "btn btn-primary btn-sm" %> |
+            <div class="category-actions textcenter ca-cat">
+                <%= link_to t('views.categories.edit'), edit_category_path(category), class: "btn btn-primary btn-sm" %>
                 <%= link_to t('views.categories.delete'), category_path(category), method: :delete,
-                data: {confirm: t('views.categories.deletemsg')},class: "btn btn-danger btn-sm" %> |
+                data: {confirm: t('views.categories.deletemsg')},class: "btn btn-danger btn-sm" %>
                 <%= link_to t('views.categories.viewarticles'), articles_path, class: "btn btn-success btn-sm" %>
             </div>
           </div>
