@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_07_122923) do
+ActiveRecord::Schema.define(version: 2020_04_11_174039) do
 
   create_table "article_categories", force: :cascade do |t|
     t.integer "article_id"
@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 2020_04_07_122923) do
     t.string "photo_content_type"
     t.integer "photo_file_size"
     t.datetime "photo_updated_at"
+    t.decimal "price", precision: 8, scale: 2
   end
 
   create_table "categories", force: :cascade do |t|

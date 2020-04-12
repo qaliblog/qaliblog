@@ -10,9 +10,14 @@
   <div class="col-md-8 card card-body bg-light">
       <p><%= simple_format(@article.description) %></p>
     <hr>
-    <% if @article.categories.any? %>
-      <p><%= t('views.articleshow.cats') %>: <%= render @article.categories %></p>
-    <% end %>
+    <div class="row">
+      <% if @article.categories.any? %>
+        <p class="col-md-8"><%= t('views.articleshow.cats') %>: <%= render @article.categories %></p>
+      <% end %>
+      <% if @article.price %>
+        <p class="price col-md-4"><%= t('views.articleform.price') %>: <%= number_to_currency(@article.price,:unit => "", :delimiter => ",") %> <%= t('views.articleform.rials') %></p>
+      <% end %>
+    </div>
   </div>
 </div>
 </div>

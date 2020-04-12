@@ -76,6 +76,8 @@ en:
       body: Body of the post...
       submit: Submit post
       backtoarticles: Back to articles
+      price: Price
+      rials: Rials
 
     articleshow:
       cats: Categories
