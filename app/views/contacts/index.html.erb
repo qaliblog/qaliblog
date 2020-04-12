@@ -12,8 +12,8 @@
       <div class="row">
         <% if current_user.admin? %>
           <div class="col-md-5">
-            <div><%= t('views.contact.username') %>: <%= User.find(contact.user_id).username %></div>
-            <div><%= t('views.contact.email') %>: <%= User.find(contact.user_id).email %></div>
+            <div><%= t('views.contact.username') %>: <%= contact.user.username %></div>
+            <div><%= t('views.contact.email') %>: <%= contact.user.email %></div>
           </div>
         <% end %>
         <div class="col-md-7 contact-actions">

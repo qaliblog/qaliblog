@@ -39,10 +39,16 @@ class ContactsController < ApplicationController
 
   def index
     if current_user.admin?
-      @contacts = Contact.all.recent_first
+      if params[:usermsid] != nil
+        @usermsid = params[:usermsid]
+        @contacts = Contact.where(user_id: @usermsid).all.recent_first
+      else
+        @contacts = Contact.all.recent_first
+      end
     else
-      @userid = current_user.id
-      @contacts = Contact.where(user_id: @userid).all.recent_first
+      @contacts = current_user.contacts
+      #@userid = current_user.id
+      #@contacts = Contact.where(user_id: @userid).all.recent_first
     end
   end
 

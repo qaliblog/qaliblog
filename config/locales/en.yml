@@ -141,6 +141,8 @@ en:
       login: Log in
       loginacc: Log into your account
       signupin: Signup in website
+      massages: massages
+      nomsgs: No massages
 
     usershow:
       welcome: welcome

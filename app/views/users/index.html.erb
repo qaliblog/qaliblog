@@ -1,12 +1,16 @@
-<h1 class="hart"><%= t('views.usersindex.intro') %>:<h1>
+<h1 class="hart"><%= t('views.usersindex.intro') %>:</h1>
 <% @users.each do |user| %>
   <div class="listing col-md-6 center textcenter">
     <div class="row userpad card">
       <div class="card-header"><h2 class="card-title"><%= link_to user.username, user_path(user) %><h2></div>
       <div class="card-body">
-        <small><%= pluralize(user.articles.count, t('views.usersindex.articlepl')) if user.articles.any? %></small>
           <% if user.admin === true %>
-            <small> | <%= t('views.usersindex.admin') %></small></br>
+            <p><%= pluralize(user.articles.count, t('views.usersindex.articlepl')) if user.articles.any? %> | <%= t('views.usersindex.admin') %></p>
+          <% end %>
+          <% if user.contacts.any? %>
+            <p><%= link_to user.contacts.count.to_s + " " + t('views.users.massages'), {:controller => "contacts", :action => "index", :usermsid => user.id } %></p>
+          <% else %>
+            <p><%= t('views.users.nomsgs') %></p>
           <% end %>
           <% if logged_in? and current_user.admin? %>
             <div class="users-admin-actions">
