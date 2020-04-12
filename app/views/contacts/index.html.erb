@@ -1,0 +1,27 @@
+<div class="row textcenter">
+  <h1 class="hart pullcenter"><%= t('views.contact.‌indextitle') %></h1>
+</div>
+<% @contacts.each do |contact| %>
+  <div class="card contactmsg-card">
+    <div class="card-header">
+      <h2 class="textcenter"><%= link_to contact.title, contact_path(contact) %></h2>
+    </div>
+    <div class="card-body container">
+      <p class="textcenter"><%= contact.description %></p>
+      <hr>
+      <div class="row">
+        <% if current_user.admin? %>
+          <div class="col-md-5">
+            <div><%= t('views.contact.username') %>: <%= User.find(contact.user_id).username %></div>
+            <div><%= t('views.contact.email') %>: <%= User.find(contact.user_id).email %></div>
+          </div>
+        <% end %>
+        <div class="col-md-7 contact-actions">
+          <%= link_to t('views.contact.edit'), edit_contact_path(contact), class: "btn btn-primary" %>
+          <%= link_to t('views.contact.delete'), contact_path(contact), method: :delete,
+           data: {confirm: t('views.contact.deletemsg')} , class: "btn btn-danger" %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

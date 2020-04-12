@@ -10,8 +10,12 @@
         <%= link_to t('views.nav.blog'), articles_path, class: "nav-link" %>
       </li>
       <li class="nav-item">
+        <%= link_to t('views.nav.contactus'), new_contact_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item">
         <%= link_to t('views.nav.about'), about_path, class: "nav-link" %>
       </li>
+
 
       <% if logged_in? %>
         <li class="nav-item dropdown">
@@ -32,6 +36,7 @@
               <%= link_to t('views.nav.newp'), new_article_path, class: "dropdown-item" %>
               <%= link_to t('views.nav.newc'), new_category_path, class: "dropdown-item" %>
               <%= link_to t('views.nav.cats'), categories_path, class: "dropdown-item" %>
+              <%= link_to t('views.contact.massages'), contacts_path, class: "dropdown-item" %>
               <div class="dropdown-divider"></div>
               <%= link_to t('views.nav.users'), users_path, class: "dropdown-item" %>
             </div>

@@ -48,6 +48,7 @@ en:
       signup: Signup
       persian: Persian
       search: Search
+      contactus: ContactUs
 
     home:
       qalion: Qali Online
@@ -104,6 +105,26 @@ en:
       submit: Submit
       backtoarticles: Back to articles
 
+
+    contact:
+      massages: Your Massages
+      contactustitle: Contact Us
+      edittitle: Edit your contact massage
+      ‌indextitle: Your massage(s)
+      showtitle: Your massage
+      viewmsgs: View all
+      edit: Edit your massage
+      delete: Delete your massage
+      username: Username
+      email: Email
+      deletemsg: Are you sure?
+
+
+    contactform:
+      title: Title
+      description: Description
+      submit: Submit
+      backtoroot: Back to first page
 
 
     users:
@@ -186,3 +207,11 @@ en:
       deleted: This user and all of its articles has been deleted!
       requireuser: You must be logged in to perform that action!
       onlyadmin: Only admin users can perform that action!
+
+
+
+    contacts:
+      created: Your massage has been submited successfully!
+      updated: Your massage was updated successfully!
+      deleted: Massage has been deleted!
+      requireuser: You must be logged in to do that!

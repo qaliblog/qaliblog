@@ -48,6 +48,8 @@ fa:
       signup: ثبت نام
       persian: فارسی
       search: جستجو
+      contactus: تماس با ما
+
 
     home:
       qalion: کالی آنلاین
@@ -107,7 +109,26 @@ fa:
 
 
 
+    contact:
+      massages: پیام ها
+      contactustitle: تماس با ما
+      edittitle: ویرایش پیغام شما
+      ‌indextitle: پیغام های شما
+      showtitle: پیغام شما
+      viewmsgs: نمایش همه
+      edit: ویرایش پیغام
+      delete: حذف کردن پیغام
+      username: نام کاربری
+      email: ایمیل
+      deletemsg:  آیا مطمئن هستید؟
 
+
+
+    contactform:
+      title: سرتیتر
+      description: توضیحات
+      submit: ثبت
+      backtoroot: بازگشت به صفحه اول
 
 
 
@@ -201,3 +222,12 @@ fa:
       deleted: این کاربر و تمامی پست هایش حذف شد!
       requireuser: شما باید ابتدا وارد شناسه کاربری خود شوید!
       onlyadmin: فقط کاربران ادمین حق باز کردن این صفحه را دارند!
+
+
+
+
+    contacts:
+      created: پیغام شما با موفقیت ثبت شد!
+      updated: پیغام شما با موفقیت ویرایش شد!
+      deleted: پیغام حذف شد!
+      requireuser: شما باید اول وارد حساب کاربری خود شوید!

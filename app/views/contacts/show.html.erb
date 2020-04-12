@@ -1,0 +1,24 @@
+<h1 class="hart textcenter"><%= t('views.contact.showtitle') %></h1>
+
+
+<div class="card">
+  <div class="card-header">
+    <h2 class="textcenter"><%= @contact.title %></h2>
+  </div>
+  <div class="card-body container">
+    <p class="textcenter"><%= @contact.description %></p>
+    <hr>
+    <div class="row">
+      <div class="col-md-5">
+        <div><%= t('views.contact.username') %>: <%= @user.username %></div>
+        <div><%= t('views.contact.email') %>: <%= @user.email %></div>
+      </div>
+      <div class="col-md-7 contact-actions">
+        <%= link_to t('views.contact.edit'), edit_contact_path(@contact), class: "btn btn-primary" %>
+        <%= link_to t('views.contact.delete'), contact_path(@contact), method: :delete,
+         data: {confirm: t('views.contact.deletemsg')} , class: "btn btn-danger" %>
+        <%= link_to t('views.contact.viewmsgs'), contacts_path, class: "btn btn-success" %>
+      </div>
+    </div>
+  </div>
+</div>
