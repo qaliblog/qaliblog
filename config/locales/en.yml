@@ -118,6 +118,8 @@ en:
       username: Username
       email: Email
       deletemsg: Are you sure?
+      unread: Mark as unread
+      isunread: Unread
 
 
     contactform:
@@ -217,3 +219,4 @@ en:
       updated: Your massage was updated successfully!
       deleted: Massage has been deleted!
       requireuser: You must be logged in to do that!
+      unreadit: The massage have been marked as unread.

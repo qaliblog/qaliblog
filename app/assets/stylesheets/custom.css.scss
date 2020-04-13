@@ -23,6 +23,12 @@ body{
   letter-spacing: $letterspace;
   word-spacing: $wordspace;
 }
+a{
+  color: #001a00;
+}
+a:hover{
+  color: #001300;
+}
 
 #logo {
   float: left;
@@ -257,11 +263,18 @@ body{
 .contact-actions{
   margin-top: 5px;
 }
+.contact-actions a{
+  margin-top: 5px;
+}
 .contactmsg-card{
   margin-top: 15px;
 }
-
-
+.unreadnote{
+  font-weight: 0;
+}
+.readnote{
+  font-weight: bold;
+}
 
 
 

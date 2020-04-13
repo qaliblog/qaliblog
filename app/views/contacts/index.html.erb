@@ -4,7 +4,13 @@
 <% @contacts.each do |contact| %>
   <div class="card contactmsg-card">
     <div class="card-header">
-      <h2 class="textcenter"><%= link_to contact.title, contact_path(contact) %></h2>
+      <h2 class="textcenter">
+        <% if contact.seen == true %>
+          <%= link_to contact.title, contact_path(contact), class: "unreadnote" %>
+        <% else %>
+          <%= link_to contact.title, contact_path(contact), class: "readnote" %>
+        <% end %>
+      </h2>
     </div>
     <div class="card-body container">
       <p class="textcenter"><%= contact.description %></p>

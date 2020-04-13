@@ -18,6 +18,9 @@
         <%= link_to t('views.contact.delete'), contact_path(@contact), method: :delete,
          data: {confirm: t('views.contact.deletemsg')} , class: "btn btn-danger" %>
         <%= link_to t('views.contact.viewmsgs'), contacts_path, class: "btn btn-success" %>
+        <% if current_user.admin? %>
+          <%= link_to t('views.contact.unread'), {:controller => "contacts", :action => "show", :unreadit => true}, class: "btn btn-secondary" %>
+        <% end %>
       </div>
     </div>
   </div>

@@ -27,7 +27,7 @@
               <%= link_to t('views.nav.newp'), new_article_path, class: "dropdown-item" %>
               <%= link_to t('views.nav.newc'), new_category_path, class: "dropdown-item" %>
               <%= link_to t('views.nav.cats'), categories_path, class: "dropdown-item" %>
-              <%= link_to t('views.contact.massages'), contacts_path, class: "dropdown-item" %>
+              <%= link_to t('views.contact.massages') + " (" + Contact.where(seen: false).all.count.to_s + ") ", contacts_path, class: "dropdown-item" %>
               <div class="dropdown-divider"></div>
               <%= link_to t('views.nav.users'), users_path, class: "dropdown-item" %>
             </div>

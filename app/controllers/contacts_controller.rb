@@ -55,6 +55,18 @@ class ContactsController < ApplicationController
 
   def show
     @user = User.find(@contact.user_id)
+    if current_user.admin?
+      if params[:unreadit]
+        @contact.seen = false
+        @contact.save
+        params[:unreadit] = nil
+        redirect_to contacts_path
+        flash[:warning] = t('cont.contacts.unreadit')
+      else
+        @contact.seen = true
+        @contact.save
+      end
+    end
   end
 
 
