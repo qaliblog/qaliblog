@@ -6,10 +6,34 @@
     <%= form_for(@user, :html => {class: "form-horizontal", role: "form"}) do |f| %>
       <div class="form-group">
         <div class="control-label col-2">
+          <%= f.label t('views.users.name') %>
+        </div>
+        <div class="col-10">
+          <%= f.text_field :name, class: "form-control", placeholder: t('views.users.entername'), autofocus: true %>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="control-label col-2">
+          <%= f.label t('views.users.lastname') %>
+        </div>
+        <div class="col-10">
+          <%= f.text_field :lastname, class: "form-control", placeholder: t('views.users.enterlastname') %>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="control-label col-2">
+          <%= f.label t('views.users.phonenumber') %>
+        </div>
+        <div class="col-10">
+          <%= f.text_field :phonenumber, class: "form-control", placeholder: t('views.users.enterphonenumber') %>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="control-label col-2">
           <%= f.label t('views.users.username') %>
         </div>
         <div class="col-10">
-          <%= f.text_field :username, class: "form-control", placeholder: t('views.users.enterusername'), autofocus: true %>
+          <%= f.text_field :username, class: "form-control", placeholder: t('views.users.enterusername') %>
         </div>
       </div>
       <div class="form-group">
@@ -26,6 +50,14 @@
         </div>
         <div class="col-10">
           <%= f.password_field :password, class: "form-control", placeholder: t('views.users.enterpassword') %>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="control-label col-2">
+          <%= f.label t('views.users.passwordconf') %>
+        </div>
+        <div class="col-10">
+          <%= f.password_field :password_confirmation, class: "form-control", placeholder: t('views.users.enterpasswordconf') %>
         </div>
       </div>
       <div class="form-group">

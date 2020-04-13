@@ -138,12 +138,20 @@ fa:
 
     users:
       edit: ویرایش مشخصات اکانت
+      name: نام
+      entername: نام خود را وارد کنید...
+      lastname: نام فامیلی
+      enterlastname: نام فامیلی خود را وارد کنید...
+      phonenumber: تلفن همراه
+      enterphonenumber: تلفن همراه خود را وارد کنید...
       username: نام کاربری
       enterusername: نام کاربری خود را وارد کنید...
       email:  ایمیل
       enteremail: ایمیل خود را وارد کنید...
       password: پسورد
       enterpassword:  پسورد خود را وارد کنید...
+      passwordconf: تکرار پسورد
+      enterpasswordconf: پسورد خود را تکرار کنید...
       signup: ثبت نام
       update: به روز رسانی حساب
       backtohome: بازگشت به صفحه اصلی
@@ -152,6 +160,7 @@ fa:
       signupin: ثبت نام در وبسایت
       massages: پیام
       nomsgs: بدون پیام
+      userinfo: اطلاعات کاربر
 
 
 

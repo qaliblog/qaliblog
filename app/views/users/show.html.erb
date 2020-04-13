@@ -1,6 +1,22 @@
-<h1 class="hart row justify-content-center"><%= t('views.usershow.welcome') %> <%= @user.username %></h1>
+<h1 class="hart"><%= t('views.usershow.welcome') %> <%= @user.username %></h1>
+
+<div class="card">
+  <div class="card-header">
+    <div class="card-title"><h2 class="textcenter"><%= t('views.users.userinfo') %></h2></div>
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-md-6"><%= t('views.users.name') %>: <%= @user.name %></div>
+      <div class="col-md-6"><%= t('views.users.lastname') %>: <%= @user.lastname %></div>
+      <div class="col-md-6"><%= t('views.users.phonenumber') %>: <%= @user.phonenumber %></div>
+      <div class="col-md-6"><%= t('views.users.username') %>: <%= @user.username %></div>
+      <div class="col-md-6"><%= t('views.users.email') %>: <%= @user.email %></div>
+    </div>
+  </div>
+</div>
+
 <% if @user.articles.any? %>
-  <h2><%= t('views.usershow.yourarticles') %>:</h2>
+  <h2 class="textcenter margintop20"><%= t('views.usershow.yourarticles') %>:</h2>
   <%= render '/articles/article', obj: @user_articles %>
   <div class="pagnav row justify-content-center">
     <%= will_paginate @user_articles %>

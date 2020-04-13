@@ -5,6 +5,7 @@ class Article < ActiveRecord::Base
   has_many :categories, through: :article_categories
   validates :title, presence: true, length: {minimum: 3, maximum: 50}
   validates :description, presence: true, length: {minimum: 10, maximum: 500}
+  validates :price, presence: true, numericality: { only_integer: true }
   validates :user_id, presence: true
   has_attached_file :photo, :styles => { large: "600x600>", medium: "300x300>", thumb: "100x100>" },
                   :url  => "/assets/articles/:id/:style/:basename.:extension",

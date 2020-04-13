@@ -131,12 +131,20 @@ en:
 
     users:
       edit: Edit your acount
+      name: Name
+      entername: Enter your firstname...
+      lastname: Lastname
+      enterlastname: Enter your lastname...
+      phonenumber: Phonenumber
+      enterphonenumber: Enter your phonenumber...
       username: Username
       enterusername: Enter your username...
       email:  Email
       enteremail: Enter your email...
       password: Password
       enterpassword:  Enter your password...
+      passwordconf: Password confirmation
+      enterpasswordconf: Enter your password again...
       signup: Signup
       update: Update account
       backtohome: Back to homepage
@@ -145,6 +153,7 @@ en:
       signupin: Signup in website
       massages: massages
       nomsgs: No massages
+      userinfo: User Informations
 
     usershow:
       welcome: welcome
