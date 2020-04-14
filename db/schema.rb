@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 2020_04_13_114241) do
     t.string "photo_content_type"
     t.integer "photo_file_size"
     t.datetime "photo_updated_at"
-    t.decimal "price", precision: 8, scale: 2
+    t.integer "price"
   end
 
   create_table "categories", force: :cascade do |t|
